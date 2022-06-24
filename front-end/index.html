@@ -11,7 +11,7 @@
 <body>
     <h2>Esta es mi calculadora</h2>
     <div class="wrapper">
-        <div class="container">
+        <div class="container1">
             <div class="first-row">
                 <input type="text" name="result" id="result" value="" placeholder="Resultado" readonly/>
                 <input type="button" value="C" id="clear" onclick="clearScreen()">
@@ -42,9 +42,12 @@
                 <input type="button" value="/" onclick="liveScreen('/')">
                 <input type="button" value="0" id="zero" onclick="liveScreen(0)">
                 <input type="button" value="." id="dot" onclick="liveScreen('.')">
-                <input type="button" value="=" onclick="result.value = eval(result.value||null)">
+                <input type="button" value="=" onclick="processResult()">
             </div>
-
+        </div>
+        <div class="container2">
+            <!-- <textarea type="text" name="history" id="history" value="" placeholder="Historial" readonly> </textarea> -->
+            <div id="historyresults"></div>
         </div>
     </div>
     <script src="scripts/scripts.js"></script>
